@@ -17,7 +17,6 @@
 
     @Test
     public void testMap(){
-      assertSame(Condition.of("123").map(Integer::parseInt).whenEquals(123).setConditionValueAsResult().result(),123);
         Condition.of("123").whenEquals("123").map(Integer::parseInt).setResult("a").andWhenEquals(123);
     }
 }
