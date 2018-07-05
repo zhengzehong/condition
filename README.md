@@ -9,8 +9,8 @@
         Condition.of(1).whenEquals(1).toDo(p -> System.out.println("2")).elseDo(System.out::print);
         Condition.of(1).whenEquals(2).setResult(1).elseWhen(p -> p > 0)
                 .setResult(2).handleResult(result -> System.out.println(result));
-  assertSame(Condition.of("123").map(Integer::parseInt).whenEquals(123).setConditionValueAsResult().result(),123);
-   Condition.of(5)
+        Condition.of("123").map(Integer::parseInt).whenEquals(123).setConditionValueAsResult().result();
+        Condition.of(5)
                 .when(t -> t % 2 == 0).toDo(t -> System.out.println(t + " is Even number"))
                 .elseDo(t -> System.out.println(t + " is Odd number"));
    }
