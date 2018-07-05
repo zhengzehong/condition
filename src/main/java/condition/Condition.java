@@ -402,14 +402,5 @@ public class Condition<T,R> {
         }
 
     }
-
-    public static void main(String[] args) {
-        String a = "1";
-             /*Condition.of(a).whenEquals("2").toDo(p -> System.out.println("2"))
-                .setResult("233").whenEquals("1").toDo(p -> System.out.println("1"))
-                .setResult("122").alwaysDo(p -> System.out.println("susccess")).result();*/
-            Condition.of(1).whenEquals(1).toDo(p -> System.out.println("2")).elseDo(System.out::print);
-            Condition.of(1).whenEquals(1).toDo(() -> System.out.println(11));
-        }
     }
 
